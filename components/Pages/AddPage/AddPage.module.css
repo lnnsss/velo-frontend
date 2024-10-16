@@ -1,0 +1,224 @@
+.pa1 {
+  width: 100%;
+  height: 100%;
+}
+.pa1_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: var(--maxWidth);
+  margin: 0px auto;
+  padding: 0px 15px;
+  text-align: center;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.addPage {
+  padding: 100px 0 40px 0;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+}
+.addPage__title {
+  font-size: 32px;
+  font-weight: 500;
+}
+.addPage__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--grey);
+  width: 1040px;
+  padding: 40px;
+  border-radius: 10px;
+  gap: 40px;
+}
+.form__point {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__point__title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.form__point__input {
+  width: 100%;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: inherit;
+}
+.form__point__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.form__point__button:hover {
+  filter: brightness(120%);
+}
+.form__point__button:active {
+  filter: brightness(80%);
+  transition: 0.2s;
+}
+.form__dateAndLang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__dateAndLang__point {
+  width: 48%;
+}
+.form__point__input__select {
+  background-color: inherit;
+}
+.form__point__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__point__header__counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+}
+.header__counter__title {
+  font-size: 20px;
+}
+.header__counter__plus {
+  font-size: 32px;
+  background-color: inherit;
+  cursor: pointer;
+}
+.form__point__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid var(--grey);
+}
+.content__element {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 5px 10px;
+}
+.content__element:not(:last-child) {
+  border-bottom: 2px solid var(--grey);
+}
+.content__element__input {
+  background-color: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  width: 90%;
+}
+.content__element__button {
+  background-color: inherit;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--grey);
+  cursor: pointer;
+}
+.form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto;
+  background-color: inherit;
+  border: 2px solid var(--green);
+  border-radius: 20px;
+  padding: 10px 80px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--green);
+  transition: 0.5s;
+}
+.form__button:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+.form__button:active {
+  transition: 0.2s;
+  filter: brightness(80%);
+}
+
+/*----media---------------------------------*/
+
+@media (max-width: 1140px) {
+  .addPage__form {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .addPage__form {
+    padding: 20px;
+  }
+  .content__element {
+    padding: 0px 10px;
+  }
+}
+
+@media (max-width: 472px) {
+  .addPage__form {
+    gap: 20px;
+  }
+  .form__dateAndLang {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form__dateAndLang__point {
+    width: 100%;
+  }
+  .form__point__title {
+    font-size: 20px;
+  }
+}
+
+/*----nightTheme---------------------------------*/
+.nightTheme {
+  color: var(--white);
+  background-color: var(--secondBlack);
+}
+
+/*----nightTheme--add-------------------------------*/
+.nightTheme .form__button {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+.nightTheme .form__button:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/*----nightTheme--inputs-------------------------------*/
+.nightTheme input:-webkit-autofill,
+.nightTheme input:-webkit-autofill:hover,
+.nightTheme input:-webkit-autofill:focus {
+  background-color: var(--secondBlack);
+  border: 1px solid inherit;
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+  transition: background-color ease-in-out 0s;
+}

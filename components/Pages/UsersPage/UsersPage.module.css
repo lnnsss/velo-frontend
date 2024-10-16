@@ -1,0 +1,245 @@
+.pa1 {
+  width: 100%;
+  height: 100%;
+}
+.pa1_container {
+  max-width: var(--maxWidth);
+  margin: 0px auto;
+  padding: 0px 15px;
+  text-align: center;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.tittle {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+}
+.usersPage {
+  padding: 100px 0 40px 0;
+  transition: 0.5s;
+}
+.userHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.filter,
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--grey);
+  border-radius: 40px;
+  background-color: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+.filter {
+  padding: 6px 18px;
+}
+.filter.active {
+  background-color: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+.input {
+  padding: 6px 18px;
+}
+.input::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--grey);
+}
+.filter:hover,
+.input:hover {
+  border-color: var(--red);
+}
+
+/*----userList---------------------------------*/
+
+.userList {
+  margin: 25px 0 0 0;
+  width: 100%;
+  min-height: 100%;
+  border: 1px solid var(--red);
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+.user:nth-child(2n + 1) {
+  background-color: var(--thirdGrey);
+}
+.user:hover {
+  background-color: var(--secondWhite);
+}
+.user:not(:last-child) {
+  border-bottom: 1px solid var(--red);
+}
+.username,
+.userRole {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black);
+  transition: 0.5s;
+}
+.username {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 32px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.btn:hover {
+  filter: brightness(120%);
+}
+.btn:active {
+  transition: 0.1s;
+  filter: brightness(80%);
+}
+
+/*----popup---------------------------------*/
+
+.popupTittle {
+  width: 80%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+.popupBtn {
+  margin: 10px 0 0 0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.redBtn {
+  background-color: var(--red);
+  color: var(--white);
+}
+.greyBtn {
+  border: 2px solid var(--grey);
+}
+.popupBtns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.popupBtns button {
+  width: 50%;
+}
+.popupBtn:hover {
+  filter: brightness(120%);
+}
+.popupBtn:active {
+  transition: 0.2s;
+  filter: brightness(90%);
+}
+
+/*----media---------------------------------*/
+
+@media (max-width: 1024px) {
+  .filter {
+    padding: 5px 15px;
+  }
+  .filter.active {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: var(--white);
+  }
+  .input {
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .usersPage {
+    padding: 70px 0 40px 0;
+  }
+  .userHeader {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 472px) {
+  .username,
+  .userRole {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .btn {
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+/*----nightTheme---------------------------------*/
+.nightTheme {
+  color: var(--white);
+  background-color: var(--secondBlack);
+}
+
+/*----nightTheme--user-------------------------------*/
+.nightTheme .user:nth-child(2n + 1) {
+  background-color: var(--fourthBlack);
+}
+.nightTheme .user:hover {
+  background-color: var(--thirdBlack);
+}
+.nightTheme .username,
+.nightTheme .userRole {
+  color: var(--white);
+}
+
+/*----nightTheme--inputs-------------------------------*/
+.nightTheme input:-webkit-autofill,
+.nightTheme input:-webkit-autofill:hover,
+.nightTheme input:-webkit-autofill:focus {
+  border: 1px solid inherit;
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

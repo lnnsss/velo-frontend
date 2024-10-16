@@ -1,0 +1,32 @@
+{
+  "name": "velo-pt-two",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "start": "next start --port 3000"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.1",
+    "concurrently": "^8.2.2",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "next": "^14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.26.1",
+    "react-slick": "^0.30.2",
+    "sharp": "^0.33.5",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
